@@ -43,6 +43,13 @@ CREATE TABLE games
   winning_team_id INTEGER REFERENCES teams,
 );
 
+CREATE TABLE results 
+(
+  id SERIAL PRIMARY KEY,
+  game_id INTEGER REFERENCES games,
+  winning_team_id INTEGER REFERENCES teams
+)
+
 
 CREATE TABLE goals 
 (
